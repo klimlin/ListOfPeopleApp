@@ -10,6 +10,7 @@ import UIKit
 class SecondListViewController: UITableViewController {
 
     var secondContactList = Person.getContactList()
+    var contactList: [Person]!
     
     
     override func viewDidLoad() {

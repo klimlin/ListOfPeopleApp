@@ -43,6 +43,15 @@ class PersonsListViewController: UITableViewController {
         guard let singleContactVC = segue.destination as? SingleContactViewController else { return }
         singleContactVC.person = contactList[indexPath.row]
         
+        guard let tabBarVC = segue.destination as? UITabBarController else { return }
+        guard let viewControllers = tabBarVC.viewControllers else { return }
+        
+        for viewController in viewControllers {
+            if let secondListVC = viewController as? SecondListViewController {
+                secondListVC.contactList = contactList
+            }
+        }
+        
     }
     
     
