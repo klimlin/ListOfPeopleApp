@@ -44,5 +44,11 @@ class PersonsListViewController: UITableViewController {
         singleContactVC.person = contactList[indexPath.row]
     }
     
+//    func prepare2(for segue: UIStoryboardSegue, sender: Any?) {
+//        guard let secondListVC = segue.destination as? SecondListViewController else { return }
+//        secondListVC.secondContactList = contactList
+//
+//    }
+    
 
 }
