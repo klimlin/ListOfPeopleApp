@@ -34,8 +34,6 @@ class SecondListViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellContact", for: indexPath) as! CellContactTableViewCell
         
-        let section = secondContactList[indexPath.section]
-        
         let contact = secondContactList[indexPath.section]
         cell.phoneLabel.text = contact.number
         cell.emailLabel.text = contact.email
