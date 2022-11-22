@@ -50,17 +50,64 @@
             </objects>
             <point key="canvasLocation" x="2074" y="373"/>
         </scene>
-        <!--View Controller-->
+        <!--Some Someone-->
         <scene sceneID="sQs-gS-vHg">
             <objects>
-                <viewController id="Jld-QO-cTO" sceneMemberID="viewController">
+                <viewController id="Jld-QO-cTO" customClass="SingleContactViewController" customModule="ListOfPeopleApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3WH-8J-Khg">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="s6N-ch-LgU">
+                                <rect key="frame" x="20.000000000000007" y="238.33333333333334" width="101.66666666666669" height="20.333333333333343"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IqL-h0-nVU">
+                                        <rect key="frame" x="0.0" y="0.0" width="45.333333333333336" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vkd-Zm-9Qj">
+                                        <rect key="frame" x="60.333333333333329" y="0.0" width="41.333333333333329" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="PsX-pH-Mi8">
+                                <rect key="frame" x="19.999999999999993" y="193" width="109.33333333333331" height="20.333333333333343"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TMq-cA-l3g">
+                                        <rect key="frame" x="0.0" y="0.0" width="53" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aEl-TM-AfF">
+                                        <rect key="frame" x="68" y="0.0" width="41.333333333333343" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="lbj-H3-LKl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PsX-pH-Mi8" firstAttribute="top" secondItem="lbj-H3-LKl" secondAttribute="top" constant="50" id="Sd7-rk-dye"/>
+                            <constraint firstItem="s6N-ch-LgU" firstAttribute="leading" secondItem="lbj-H3-LKl" secondAttribute="leading" constant="20" id="aOm-FO-xW0"/>
+                            <constraint firstItem="s6N-ch-LgU" firstAttribute="top" secondItem="PsX-pH-Mi8" secondAttribute="bottom" constant="25" id="luK-rG-gSf"/>
+                            <constraint firstItem="PsX-pH-Mi8" firstAttribute="leading" secondItem="lbj-H3-LKl" secondAttribute="leading" constant="20" id="mev-gw-wtL"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="QHq-Bi-CHY"/>
+                    <navigationItem key="navigationItem" title="Some Someone" id="QHq-Bi-CHY"/>
+                    <connections>
+                        <outlet property="emailLabel" destination="Vkd-Zm-9Qj" id="xAt-oZ-wcT"/>
+                        <outlet property="nameItem" destination="QHq-Bi-CHY" id="PWH-Ij-f0d"/>
+                        <outlet property="phoneNumberLabel" destination="aEl-TM-AfF" id="bNC-X8-kjQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HWJ-bc-2gS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

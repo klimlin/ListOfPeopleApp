@@ -15,6 +15,7 @@
 		FA959C0A292CCAF90045DA1F /* PersonsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA959C09292CCAF90045DA1F /* PersonsListViewController.swift */; };
 		FA959C0C292CCCC10045DA1F /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA959C0B292CCCC10045DA1F /* Contacts.swift */; };
 		FA959C0F292CCE050045DA1F /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA959C0E292CCE050045DA1F /* DataStore.swift */; };
+		FA959C12292CDF810045DA1F /* SingleContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA959C11292CDF810045DA1F /* SingleContactViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		FA959C09292CCAF90045DA1F /* PersonsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsListViewController.swift; sourceTree = "<group>"; };
 		FA959C0B292CCCC10045DA1F /* Contacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contacts.swift; sourceTree = "<group>"; };
 		FA959C0E292CCE050045DA1F /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		FA959C11292CDF810045DA1F /* SingleContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleContactViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				FA959C09292CCAF90045DA1F /* PersonsListViewController.swift */,
+				FA959C11292CDF810045DA1F /* SingleContactViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA959C0C292CCCC10045DA1F /* Contacts.swift in Sources */,
+				FA959C12292CDF810045DA1F /* SingleContactViewController.swift in Sources */,
 				FA93DB76292CC241007C71FD /* AppDelegate.swift in Sources */,
 				FA959C0A292CCAF90045DA1F /* PersonsListViewController.swift in Sources */,
 				FA959C0F292CCE050045DA1F /* DataStore.swift in Sources */,
