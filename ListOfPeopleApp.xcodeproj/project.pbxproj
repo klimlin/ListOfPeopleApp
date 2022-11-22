@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		FA93DB76292CC241007C71FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA93DB75292CC241007C71FD /* AppDelegate.swift */; };
 		FA93DB78292CC241007C71FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA93DB77292CC241007C71FD /* SceneDelegate.swift */; };
-		FA93DB7A292CC241007C71FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA93DB79292CC241007C71FD /* ViewController.swift */; };
 		FA93DB7D292CC241007C71FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA93DB7B292CC241007C71FD /* Main.storyboard */; };
 		FA93DB7F292CC242007C71FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA93DB7E292CC242007C71FD /* Assets.xcassets */; };
 		FA93DB82292CC242007C71FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA93DB80292CC242007C71FD /* LaunchScreen.storyboard */; };
+		FA959C0A292CCAF90045DA1F /* PersonsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA959C09292CCAF90045DA1F /* PersonsListViewController.swift */; };
+		FA959C0C292CCCC10045DA1F /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA959C0B292CCCC10045DA1F /* Contacts.swift */; };
+		FA959C0F292CCE050045DA1F /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA959C0E292CCE050045DA1F /* DataStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FA93DB72292CC241007C71FD /* ListOfPeopleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListOfPeopleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA93DB75292CC241007C71FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA93DB77292CC241007C71FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FA93DB79292CC241007C71FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FA93DB7C292CC241007C71FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA93DB7E292CC242007C71FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA93DB81292CC242007C71FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA93DB83292CC242007C71FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA959C09292CCAF90045DA1F /* PersonsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsListViewController.swift; sourceTree = "<group>"; };
+		FA959C0B292CCCC10045DA1F /* Contacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contacts.swift; sourceTree = "<group>"; };
+		FA959C0E292CCE050045DA1F /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,65 @@
 		FA93DB74292CC241007C71FD /* ListOfPeopleApp */ = {
 			isa = PBXGroup;
 			children = (
-				FA93DB75292CC241007C71FD /* AppDelegate.swift */,
-				FA93DB77292CC241007C71FD /* SceneDelegate.swift */,
-				FA93DB79292CC241007C71FD /* ViewController.swift */,
-				FA93DB7B292CC241007C71FD /* Main.storyboard */,
-				FA93DB7E292CC242007C71FD /* Assets.xcassets */,
-				FA93DB80292CC242007C71FD /* LaunchScreen.storyboard */,
+				FA959C10292CCE0A0045DA1F /* Services */,
+				FA959C0D292CCCCB0045DA1F /* Models */,
+				FA959C05292CC7C40045DA1F /* App */,
+				FA959C08292CC7E60045DA1F /* ViewControllers */,
+				FA959C06292CC7CD0045DA1F /* Storyboards */,
+				FA959C07292CC7D60045DA1F /* Resources */,
 				FA93DB83292CC242007C71FD /* Info.plist */,
 			);
 			path = ListOfPeopleApp;
+			sourceTree = "<group>";
+		};
+		FA959C05292CC7C40045DA1F /* App */ = {
+			isa = PBXGroup;
+			children = (
+				FA93DB75292CC241007C71FD /* AppDelegate.swift */,
+				FA93DB77292CC241007C71FD /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		FA959C06292CC7CD0045DA1F /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FA93DB7B292CC241007C71FD /* Main.storyboard */,
+				FA93DB80292CC242007C71FD /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		FA959C07292CC7D60045DA1F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FA93DB7E292CC242007C71FD /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FA959C08292CC7E60045DA1F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FA959C09292CCAF90045DA1F /* PersonsListViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FA959C0D292CCCCB0045DA1F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FA959C0B292CCCC10045DA1F /* Contacts.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FA959C10292CCE0A0045DA1F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FA959C0E292CCE050045DA1F /* DataStore.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +192,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA93DB7A292CC241007C71FD /* ViewController.swift in Sources */,
+				FA959C0C292CCCC10045DA1F /* Contacts.swift in Sources */,
 				FA93DB76292CC241007C71FD /* AppDelegate.swift in Sources */,
+				FA959C0A292CCAF90045DA1F /* PersonsListViewController.swift in Sources */,
+				FA959C0F292CCE050045DA1F /* DataStore.swift in Sources */,
 				FA93DB78292CC241007C71FD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,9 +357,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Alina-Klimova.ListOfPeopleApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -328,9 +387,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Alina-Klimova.ListOfPeopleApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
