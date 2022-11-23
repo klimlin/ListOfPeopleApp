@@ -43,42 +43,7 @@ class PersonsListViewController: UITableViewController {
         guard let singleContactVC = segue.destination as? SingleContactViewController else { return }
         singleContactVC.person = contactList[indexPath.row]
         
-        guard let tabBarVC = segue.destination as? UITabBarController else { return }
-        guard let viewControllers = tabBarVC.viewControllers else { return }
-        
-        for viewController in viewControllers {
-            if let secondListVC = viewController as? SecondListViewController {
-                secondListVC.contactList = contactList
-            }
-        }
-        
     }
-    
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        guard let tabBarVC = segue.destination as? UITabBarController else { return }
-//        guard let viewControllers = tabBarVC.viewControllers else { return }
-//
-//        for viewController in viewControllers {
-//            if let welcomeVC = viewController as? WelcomeViewController {
-//                welcomeVC.user = user
-//            } else if let quatationVC = viewController as? QuotationViewController {
-//                quatationVC.user = user
-//            } else if let navigationVC = viewController as? UINavigationController {
-//                guard let userInfoVC = navigationVC.topViewController as? GeneralInfoViewController else {
-//                    return
-//                }
-//                userInfoVC.user = user
-//            }
-//        }
-//
-//    }
-    
-//    func prepare2(for segue: UIStoryboardSegue, sender: Any?) {
-//        guard let secondListVC = segue.destination as? SecondListViewController else { return }
-//        secondListVC.secondContactList = contactList
-//
-//    }
     
 
 }
