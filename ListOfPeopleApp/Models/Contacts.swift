@@ -15,101 +15,39 @@ struct Person {
 
 extension Person {
     static func getContactList() -> [Person] {
-        var finalList: [Person] = []
-        var firstNames = DataStore.shared.firstNames
-        var lastNames = DataStore.shared.lastNames
-        var numbers = DataStore.shared.numbers
-        var emails = DataStore.shared.emails
         
-        for _ in 1...10 {
-            let itemFirstName = firstNames.randomElement()!
-            let itemLastname = lastNames.randomElement()!
-            let itemNumber = numbers.randomElement()!
-            let itemEmail = emails.randomElement()!
-            
-            finalList.append(
-                Person(
-                    firstName: itemFirstName,
-                    lastName: itemLastname,
-                    number: itemNumber,
-                    email: itemEmail)
+        var finalList: [Person] = []
+        
+        let firstNames = DataStore.shared.firstNames.shuffled()
+        let lastNames = DataStore.shared.lastNames.shuffled()
+        let numbers = DataStore.shared.numbers.shuffled()
+        let emails = DataStore.shared.emails.shuffled()
+        
+        let iterationCount = min(
+            firstNames.count,
+            lastNames.count,
+            numbers.count,
+            emails.count
+        )
+        
+        for index in 0..<iterationCount {
+            let person = Person(
+                firstName: firstNames[index],
+                lastName: lastNames[index],
+                number: numbers[index],
+                email: emails[index]
             )
             
-            firstNames = removeElementFromList(element: itemFirstName, from: firstNames)
-            lastNames = removeElementFromList(element: itemLastname, from: lastNames)
-            numbers = removeElementFromList(element: itemNumber, from: numbers)
-            emails = removeElementFromList(element: itemEmail, from: emails)
-        }
-        
-        func removeElementFromList(element: String, from items: [String]) -> [String] {
-            var resultList: [String] = []
-            for item in items {
-                if item == element {
-                    resultList = items.filter { $0 != item}
-                }
-            }
-            return resultList
+            finalList.append(person)
         }
         
         return finalList
     }
 }
 
-/*
- extension Person {
- static func getContactList() -> [Person] {
- [
- Person(
- firstName: DataStore.shared.firstNames.randomElement()!,
- lastName: DataStore.shared.lastNames.randomElement()!,
- number: DataStore.shared.numbers.randomElement()!,
- email: DataStore.shared.emails.randomElement()!),
- Person(
- firstName: DataStore.shared.firstNames.randomElement()!,
- lastName: DataStore.shared.lastNames.randomElement()!,
- number: DataStore.shared.numbers.randomElement()!,
- email: DataStore.shared.emails.randomElement()!),
- Person(
- firstName: DataStore.shared.firstNames.randomElement()!,
- lastName: DataStore.shared.lastNames.randomElement()!,
- number: DataStore.shared.numbers.randomElement()!,
- email: DataStore.shared.emails.randomElement()!),
- Person(
- firstName: DataStore.shared.firstNames.randomElement()!,
- lastName: DataStore.shared.lastNames.randomElement()!,
- number: DataStore.shared.numbers.randomElement()!,
- email: DataStore.shared.emails.randomElement()!),
- Person(
- firstName: DataStore.shared.firstNames.randomElement()!,
- lastName: DataStore.shared.lastNames.randomElement()!,
- number: DataStore.shared.numbers.randomElement()!,
- email: DataStore.shared.emails.randomElement()!),
- Person(
- firstName: DataStore.shared.firstNames.randomElement()!,
- lastName: DataStore.shared.lastNames.randomElement()!,
- number: DataStore.shared.numbers.randomElement()!,
- email: DataStore.shared.emails.randomElement()!),
- Person(
- firstName: DataStore.shared.firstNames.randomElement()!,
- lastName: DataStore.shared.lastNames.randomElement()!,
- number: DataStore.shared.numbers.randomElement()!,
- email: DataStore.shared.emails.randomElement()!),
- Person(
- firstName: DataStore.shared.firstNames.randomElement()!,
- lastName: DataStore.shared.lastNames.randomElement()!,
- number: DataStore.shared.numbers.randomElement()!,
- email: DataStore.shared.emails.randomElement()!),
- Person(
- firstName: DataStore.shared.firstNames.randomElement()!,
- lastName: DataStore.shared.lastNames.randomElement()!,
- number: DataStore.shared.numbers.randomElement()!,
- email: DataStore.shared.emails.randomElement()!),
- Person(
- firstName: DataStore.shared.firstNames.randomElement()!,
- lastName: DataStore.shared.lastNames.randomElement()!,
- number: DataStore.shared.numbers.randomElement()!,
- email: DataStore.shared.emails.randomElement()!)
- ]
- }
- }
- */
+enum Contacts: String {
+    case phone = "phone"
+    case email = "tray"
+}
+
+

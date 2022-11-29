@@ -105,7 +105,6 @@
                     <navigationItem key="navigationItem" title="Some Someone" id="QHq-Bi-CHY"/>
                     <connections>
                         <outlet property="emailLabel" destination="Vkd-Zm-9Qj" id="xAt-oZ-wcT"/>
-                        <outlet property="nameItem" destination="QHq-Bi-CHY" id="PWH-Ij-f0d"/>
                         <outlet property="phoneNumberLabel" destination="aEl-TM-AfF" id="bNC-X8-kjQ"/>
                     </connections>
                 </viewController>
@@ -142,97 +141,46 @@
                     </tabBar>
                     <connections>
                         <segue destination="Gyv-S2-J46" kind="relationship" relationship="viewControllers" id="uzL-cb-vFD"/>
-                        <segue destination="5jR-Fy-AX6" kind="relationship" relationship="viewControllers" id="h83-4M-s0e"/>
+                        <segue destination="j1Z-Pa-Ygr" kind="relationship" relationship="viewControllers" id="qh9-SL-lQH"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HLT-xN-gFs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1180" y="373"/>
         </scene>
-        <!--Contacts-->
-        <scene sceneID="Wra-LJ-xdp">
+        <!--Exm-->
+        <scene sceneID="Dq5-gC-WRe">
             <objects>
-                <tableViewController id="5jR-Fy-AX6" customClass="SecondListViewController" customModule="ListOfPeopleApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="mzP-4k-dX8">
+                <tableViewController id="j1Z-Pa-Ygr" customClass="ExampleListViewController" customModule="ListOfPeopleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="0M9-xw-gd2">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellContact" rowHeight="116" id="SCL-XD-RnB" customClass="CellContactTableViewCell" customModule="ListOfPeopleApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="50" width="390" height="116"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="exmContact" id="BEJ-7D-YRV">
+                                <rect key="frame" x="0.0" y="50" width="390" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SCL-XD-RnB" id="yCh-QN-vEq">
-                                    <rect key="frame" x="0.0" y="0.0" width="390" height="116"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BEJ-7D-YRV" id="88Y-Cn-0F0">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="E3I-P4-j7k">
-                                            <rect key="frame" x="20" y="4" width="50" height="108"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="gsf-Cs-GzK">
-                                                    <rect key="frame" x="0.0" y="1.3333333333333357" width="50" height="48"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="50" id="JGn-lD-VGp"/>
-                                                        <constraint firstAttribute="height" constant="50" id="epn-5X-16K"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shippingbox" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Zpa-Sq-Ggt">
-                                                    <rect key="frame" x="0.0" y="58.333333333333343" width="50" height="49.999999999999993"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="50" id="Rxl-Xo-uE1"/>
-                                                        <constraint firstAttribute="width" constant="50" id="Z8j-xQ-LH6"/>
-                                                    </constraints>
-                                                </imageView>
-                                            </subviews>
-                                        </stackView>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="6Hb-po-SQh">
-                                            <rect key="frame" x="90" y="22.666666666666664" width="48.333333333333343" height="70.666666666666686"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AJe-Jq-Mcc">
-                                                    <rect key="frame" x="0.0" y="0.0" width="48.333333333333336" height="20.333333333333332"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k2J-JO-00d">
-                                                    <rect key="frame" x="0.0" y="50.333333333333329" width="40.666666666666664" height="20.333333333333329"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </stackView>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="E3I-P4-j7k" firstAttribute="top" secondItem="yCh-QN-vEq" secondAttribute="top" constant="4" id="2pH-kf-M2E"/>
-                                        <constraint firstAttribute="bottom" secondItem="E3I-P4-j7k" secondAttribute="bottom" constant="4" id="3QM-GQ-gkp"/>
-                                        <constraint firstItem="6Hb-po-SQh" firstAttribute="leading" secondItem="E3I-P4-j7k" secondAttribute="trailing" constant="20" id="Lgn-zx-Jwk"/>
-                                        <constraint firstItem="6Hb-po-SQh" firstAttribute="centerY" secondItem="yCh-QN-vEq" secondAttribute="centerY" id="e6M-it-swD"/>
-                                        <constraint firstItem="E3I-P4-j7k" firstAttribute="leading" secondItem="yCh-QN-vEq" secondAttribute="leading" constant="20" id="ssR-6g-xGh"/>
-                                    </constraints>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="emailLabel" destination="k2J-JO-00d" id="6zY-pa-HIH"/>
-                                    <outlet property="phoneLabel" destination="AJe-Jq-Mcc" id="VxA-7h-6iZ"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="5jR-Fy-AX6" id="Dcp-gA-ioU"/>
-                            <outlet property="delegate" destination="5jR-Fy-AX6" id="PUt-N3-1aj"/>
+                            <outlet property="dataSource" destination="j1Z-Pa-Ygr" id="V2H-Xg-200"/>
+                            <outlet property="delegate" destination="j1Z-Pa-Ygr" id="LkW-0Q-SOp"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Contacts" image="person.circle" catalog="system" id="NQE-ci-hZa"/>
+                    <tabBarItem key="tabBarItem" title="Exm" image="scooter" catalog="system" id="I2l-mi-7sZ"/>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="k8E-Ej-AJw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Fg-Da-iXu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="683" y="1108"/>
+            <point key="canvasLocation" x="717" y="1108"/>
         </scene>
     </scenes>
     <resources>
-        <image name="person.circle" catalog="system" width="128" height="123"/>
         <image name="person.circle.fill" catalog="system" width="128" height="123"/>
-        <image name="phone" catalog="system" width="128" height="115"/>
-        <image name="shippingbox" catalog="system" width="128" height="123"/>
+        <image name="scooter" catalog="system" width="128" height="94"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

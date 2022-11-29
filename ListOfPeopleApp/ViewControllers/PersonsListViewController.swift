@@ -10,12 +10,6 @@ import UIKit
 class PersonsListViewController: UITableViewController {
 
     var contactList: [Person]!
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
 
     // MARK: - Table view data source
 
@@ -27,9 +21,11 @@ class PersonsListViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "contact", for: indexPath)
         let contact = contactList[indexPath.row]
+        
         var content = cell.defaultContentConfiguration()
         content.text = "\(contact.firstName) \(contact.lastName)"
         cell.contentConfiguration = content
+        
         return cell
     }
     

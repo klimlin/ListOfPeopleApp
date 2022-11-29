@@ -61,6 +61,6 @@ class DataStore {
         "l@gmail.com"
     ]
     
+    private init() {}
+    
 }
-
-//let string = DataStore.shared.strings
