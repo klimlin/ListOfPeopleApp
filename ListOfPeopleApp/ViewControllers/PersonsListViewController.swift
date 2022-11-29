@@ -9,12 +9,12 @@ import UIKit
 
 class PersonsListViewController: UITableViewController {
 
-    private var contactList = Person.getContactList()
+    var contactList: [Person]!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
 
     // MARK: - Table view data source

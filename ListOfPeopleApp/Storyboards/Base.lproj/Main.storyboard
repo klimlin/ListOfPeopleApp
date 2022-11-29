@@ -127,15 +127,16 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EM5-Pv-3Am" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1180" y="-350"/>
+            <point key="canvasLocation" x="368" y="373"/>
         </scene>
         <!--Persons List-->
         <scene sceneID="8ly-IU-4Xo">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="cYm-pI-nIq" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="cYm-pI-nIq" customClass="TabBarViewController" customModule="ListOfPeopleApp" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Persons List" id="qCO-en-pqn"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lHy-Of-RC5">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

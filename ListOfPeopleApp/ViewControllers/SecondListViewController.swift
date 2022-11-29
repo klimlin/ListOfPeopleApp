@@ -8,12 +8,17 @@
 import UIKit
 
 class SecondListViewController: UITableViewController {
+    
 
-    var secondContactList = Person.getContactList()
+    var secondContactList: [Person]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+    }
+    
+    func provide(personList: [Person]) {
+        secondContactList = personList
     }
     
     private func changeOptional(for array: [Person]!) -> [Person] {
